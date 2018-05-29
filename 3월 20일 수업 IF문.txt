@@ -1,0 +1,80 @@
+/*
+#include <stdio.h>
+
+
+int main()
+
+
+{
+
+	int age;
+	float height;
+
+
+	printf("나이를 입력하세요 : ");
+	scanf("%d",&age);
+
+	printf("키를 입력하세요 : ");
+	scanf("%f",&height);
+
+
+	printf("나이는 %d세이고 키는 %.1f cm 입니다\n",age,height);
+
+	if(height<=180)
+		printf("루저입니다\n");
+	else
+		printf("키 크시네요\n");
+
+	return 0;
+
+	
+}
+
+*/
+
+/*#include <stdio.h>
+
+
+int main()
+
+
+{
+
+	int number, absolute;
+
+	printf("정수 입력 : ");
+	scanf("%d", &number);
+
+	if (number < 0)
+		number = -number;
+	
+
+
+
+	printf("입력한 수는 %d이고 절대값은 %d입니다.\n", number,absolute);
+
+	return 0;
+
+	
+}*/
+
+
+/*#include <stdio.h>
+
+
+int main(void)
+
+
+{
+	int number;
+
+	printf("정수를 입력하시오 :");
+	scanf("%d", &number);
+
+	if(number <0)
+		printf("%d는 0보다 작습니다. \n", number);
+	else
+		printf("%d는 0보다 크거나 같습니다.\n", number);
+
+	return 0;
+} */

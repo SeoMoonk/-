@@ -1,0 +1,101 @@
+//#include <stdio.h>
+//
+//int get_integer(void);
+//int combination(int n, int r);
+//long permutation (int n, int r);
+//int main(void)
+//{
+//	int a, b;
+//
+//	a = get_integer();
+//	b = get_integer();
+//
+//	printf("P(%d, %d) = %d \n", a, b, permutation(a,b));
+//
+//	return 0;
+//}
+//
+////int combination(int n, int r)
+////{
+////	return factorial (n) / (factorial (r) * factorial (n-r));
+////}
+//
+//int get_integer(void)
+//{
+//	int n;
+//
+//	printf("정수를 입력하시오 : ");
+//	scanf("%d",&n);
+//
+//	return n;
+//}
+//
+//long permutation (int n, int r)
+//{
+//	int i;
+//	long result = 1;
+//
+//	for(i = n-r+1; i <= n; i++)
+//		result = result * i;
+//
+//	return result ;
+//}
+//
+
+
+//두 점 사이의 거리를 계산하는 함수를 작성하여 보자, 2차원 공간에서 두 점 (x1, y1)와 (x2, y2)사이의 거리를 계산하는
+//get_distance(double x1, double y1, double x2, double y2)를 작성하라. 다음과 같은 두 점 사이의 거리를
+//계산하는 공식을 사용하라.  제곱근은 sqrt()라이브러리 함수를 사용하라.
+//d= 루트 (x1-x2)제곱 + (y1-y2)제곱
+
+//루트 = double sqrt(double x)
+
+//#include <stdio.h>
+//#include <stdlib.h>
+//#include <math.h>
+//
+//double get_distance(double x1, double y1, double x2, double y2);
+//
+//int main (void)
+//{
+//	double a, b, c, d;
+//
+//	printf("첫 번째 좌표값을 입력해주세요 : ");
+//	scanf("%lf %lf",&a,&b);
+//	printf("두 번째 좌표값을 입력해주세요 : ");
+//	scanf("%lf %lf",&c,&d);
+//
+//	printf("거리 = %lf \n", get_distance(a,b,c,d));
+//
+//	return 0;
+//
+//}
+//
+//double get_distance(double x1, double y1, double x2, double y2)
+//{
+//	double sol = sqrt((x1 - x2) * ( x1 -  x2) + ( y1 -  y2) * ( y1 - y2));
+//
+//	return sol;
+//}
+
+#include <stdio.h>
+
+int round(double f);
+
+int main(void)
+{
+	double a;
+
+	printf("실수를 입력하시오 : ");
+	scanf("%lf",&a);
+
+	printf("반올림한 값은 %d 입니다.\n", round(a));
+
+	return 0;
+
+}
+
+int round(double f)
+{
+	return (int)(f+0.5);
+}

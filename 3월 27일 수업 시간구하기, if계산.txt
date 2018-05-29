@@ -1,0 +1,67 @@
+//double x, y, result;
+
+	//printf("두개의 정수를 입력하시오: ");
+	//scanf("%lf %lf", &x, &y);
+
+	//result = x + y ;
+	//printf("%lf + %lf = %lf\n", x, y, result);
+
+	//result = x - y ;
+	//printf("%lf - %lf = %lf\n", x, y, result);
+
+	//result = x * y ;
+	//printf("%lf * %lf = %lf\n", x, y, result);
+
+	//result = x / y ;
+	//printf("%lf / %lf = %lf\n", x, y, result);
+
+	//result = x % y;
+	//printf("%lf %% %lf = %lf\n",x, y, result);
+
+
+	//int x,input, hour, minute, second;
+	////변수를 추가해도 됨
+
+	//printf("초를 입력하시오 : ");
+	//scanf("%d", &input);
+
+	//hour = input /3600;
+
+	//x = input % 3600;
+
+	//minute = x  /  SEC_PER_MINUTE;
+	//second = x  %  SEC_PER_MINUTE;
+
+	//printf("%d초는 %d시 %d분 %d초입니다. \n", input, hour, minute, second);
+
+
+#include <stdio.h>
+
+int main()
+{
+	
+
+
+
+
+	int height, weight, eq ;
+
+	
+
+	printf("체중과 키를 입력하시오(키, 체중) : ");
+	scanf("%d , %d", &height, &weight);
+
+	eq = (height - 100 ) * 0.9;
+
+	if (weight > eq)
+		printf("과체중입니다\n");
+	if (weight = eq)
+		printf("표준체중입니다\n");
+	else
+		printf("저체중입니다\n");
+
+	
+
+	return 0;
+
+}

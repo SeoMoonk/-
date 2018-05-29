@@ -1,0 +1,86 @@
+
+//p.340 예제
+//#include <stdio.h>
+//
+//int main(void)
+//
+//{
+//	int i;
+//
+//	for( i = 0; i < 5; i++)
+//	{
+//		int temp = 1;
+//		printf("temp = %d\n", temp);
+//		temp++;
+//	}
+//	return 0;
+//}
+
+//p.341 예제
+//#include <stdio.h>
+//
+//int inc(int counter);
+//
+//int main(void)
+//{
+//	int i = 10;
+//
+//	printf("함수 호출 전 i =%d\n", i);
+//	inc(i);
+//	printf("함수 호출 후 i=%d\n", i);
+//
+//	return 0;
+//}
+//
+//int inc(int counter)
+//{
+//	counter ++;
+//	return counter;
+//}
+
+
+//#include <stdio.h>
+//
+//int x = 123;		//전역 변수  (함수 바깥에 있음, 아무나 접근할 수 있다.)
+//
+//void sub1()
+//{
+//	printf("In sub1() x=%d\n",x);	//전역변수 x 접근
+//}
+//
+//void sub2()
+//{
+//	printf("In sub2() x=%d\n",x);
+//}
+//
+//int main(void)
+//{
+//	sub1();
+//	sub2();
+//	return 0;
+//}
+
+#include <stdio.h>
+
+void sub(void)
+{
+	int auto_count = 0;				//자동변수
+	static int static_count = 0;	//정적 "지역!!!!" 변수 (static이 저장 유형 지정자, 전역변수와는 확연히 다름)
+	auto_count++;
+	static_count++;
+
+	printf("auto_count=%d\n", auto_count);
+	printf("static_count=%d\n", static_count);
+}
+
+
+int main(void)
+{
+	int i;
+
+	for (i = 0; i < 3; i++)
+		sub();
+
+	return 0;
+}
+

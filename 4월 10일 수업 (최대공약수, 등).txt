@@ -1,0 +1,100 @@
+// p.246 sum.c
+// 1~n 까지 홀수합과 짝수합을 둘 다 출력
+
+//#include <stdio.h>
+//int main(void)
+//{
+//	int i, n, sum, se, qq;
+//
+//	printf("정수를 입력하시오: " );
+//	scanf("%d", &n);
+//
+//	i = 1;
+//	sum = 0;
+//	qq = 0;
+//
+//	
+//	while(i <=n)
+//	{
+//	 
+//		if (i % 2 == 1)
+//		sum += i;
+//		else
+//			qq += i;
+//		i++;
+//
+//
+//
+//	}
+//
+//
+//	printf("1부터 %d까지의 홀수 합은 %d입니다\n", n, sum);
+//	printf("1부터 %d까지의 짝수 합은 %d입니다\n",n,qq);
+//
+//	return 0;
+//}
+
+
+
+//#include <stdio.h>
+//#include <limits.h>
+//
+//int main(void)
+//{
+//	int number, max_value = INT_MIN;
+//	int  num,min_value = INT_MAX;
+//
+//	printf("정수를 입력하시오\n종료는 Ctrl+z 후 엔터키\n");
+//
+//	while(scanf("%d",&number) != EOF)
+//		{
+//			if( number > max_value )
+//				max_value = number;
+//			if (number < min_value)			//else if가 안되는 이유는 위의 if문이 True 이기 때문에 else if 문이 실행되지 않는다.
+//				min_value = number;
+//		}
+//
+//
+//
+//	printf("최대값은 %d\n", max_value);
+//	printf("최소값은 %d\n", min_value);
+//
+//
+//	return 0;
+//}
+
+
+#include <stdio.h>
+
+int main(void)
+{
+
+
+	int x, y, r, temp ;
+
+	printf("두개의 정수를 입력하시오 : " );
+	scanf("%d%d", &x, &y);
+
+	// x가 y보다 작으면 x값과 y값을 바꿈(exchange)
+
+	if (x < y)			// x == 8,. y == 12
+	{
+
+		temp = x;		// x == 8, y == 12, temp == 8
+		x = y;				// x == 12, y == 12
+		y = temp;		// x == 12, y == 8, temp == 8
+
+	}
+	/////////////////////////////////////////////////////////////////////////////////////////////
+	while (y!= 0)
+	{
+
+		r = x % y;
+		x = y;
+		y = r;
+	}
+	printf("최대 공약수는 %d입니다. \n", x);
+
+
+	return 0;
+}

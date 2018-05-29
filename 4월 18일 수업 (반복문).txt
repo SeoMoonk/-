@@ -1,0 +1,169 @@
+//#include <stdio.h>
+//#include <stdlib.h>
+//#include <time.h>
+//
+//
+//int main (void)
+//{
+//
+//
+//	int high,low,guess, answer, tries ;
+//
+//
+//
+//	printf("숫자 맞추기 게임입니다.\n");
+//	
+//
+//	printf("난수 하한값 입력 : ");
+//	scanf("%d",&low);
+//
+//	do
+//	{
+//
+//	printf("난수 상한값 입력(%d보다 작지 않은 수) : ",low);
+//	scanf("%d",&high);
+//
+//	}
+//	while (high < low);
+//
+//
+//	srand(	(unsigned int) time(0) );
+//	answer = rand()% high + low;
+//
+//	do
+//	{
+//		tries = 1;
+//		printf("%d번째 시도, %d~%d사이 추측값 입력 : ",tries,low,high);
+//		scanf("%d", &guess);
+//
+//	}while (guess <low || guess >high);
+//
+//
+//	while (guess != answer)
+//	{
+//	tries++;
+//
+//	printf("%d번째 시도, %d~%d사이 추측값 입력 : ",tries,low,high);
+//	scanf("%d", &guess);
+//
+//	if(guess > answer)
+//		printf("정답은 %d보다 작습니다.\n",guess);
+//	else if (guess < answer)
+//		printf("정답은 %d보다 큽니다.\n",guess);
+//	else if (guess = answer)
+//		printf("축하합니다. 정답은 %d입니다.\n",answer);
+//	}
+//
+//
+//
+//	//궁금한점
+//	//		   1) 하한값과 상한값을 설정해 두고 그 사이의 값은 입력하지 못하게 해두었는데
+//	//			  왜 그 사이로 설정해 두어도 숫자가 자꾸 튈까?
+//	//		   2) rand 설정값의 정확한 범위 (적당한 값 + 적당한 값)에 무엇이 들어가야할까?
+//	//		   3) 첫번째 실행때 ~보다 작습니다, ~보다 큽니다 라는 문구가 왜 나오지 않을까?
+//
+//
+//	return 0;
+//
+//}
+
+
+//#include <stdio.h>
+//
+//int main()
+//{
+//	int x, y,n ;
+//
+//	printf("정수 입력 : " );
+//	scanf("%d", &n);
+//																													// 5 4 3 2 1
+//																											    	//4 3 2 1
+//
+//	for (x=n;  x>=1; x--)			
+//	{
+//		printf("x = %d : " , x);
+//
+//		 for (y = x; y>=1; y--)	
+//			printf("%d", y);
+//
+//		printf("\n");
+//	}
+//	
+//	return 0;
+//}
+
+
+//#include <stdio.h>
+//
+//int main()
+//{
+//
+//	int x, y;
+//	for (y=1; y<=7; y++)			
+//	{
+//
+//		printf(" y = %d ",y);
+//		//현재 y에는 1이 들어가 있는 상태
+//		for (x = 1; x <= 7; x++)
+//		{
+//
+//											//현재 x에는 1이 들어가있고 7보다 작을때동안 x+1이 반복되는 상황
+//			if (x+y<=7)				//여기 IF문에 x와 y를 동시활용한 식이 와야한다.				x+y가 8일때 *이 생성		
+//				printf(" ");
+//			else
+//				printf("*");
+//		}
+//
+//		printf("\n");
+//	}
+//
+//	return 0;
+//}
+
+
+//#include <stdio.h>
+//
+//int main()
+//{
+//
+//	int x, y;
+//
+//	for (y = 7; y >= 1; y--)
+//	{
+//		printf("y = %d : " , y);
+//
+//		for (x = 1; x<=7; x++)
+//		{
+//			if (x + y >=8)
+//				printf("*");
+//			else
+//				printf(" ");
+//		}
+//
+//		printf("\n");
+//	}
+//	return 0;
+//}
+
+
+#include <stdio.h>
+
+int main()
+{
+
+	int n ;
+	printf("정수를 입력하시오 : ");
+	scanf("%d",&n);
+
+
+	do
+	{
+	
+		printf("%d", n%10);
+		n = n/10;
+	}
+	while (n != 0);
+
+
+	return 0;
+}

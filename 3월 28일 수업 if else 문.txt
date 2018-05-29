@@ -1,0 +1,78 @@
+#include <stdio.h>
+#define SEC_PER_MINUTE
+
+int main(void)
+{
+
+	int x, b, dt, hour,min, sec ;
+
+	printf("초를 입력하시오 :");
+	scanf("%d", &x);
+
+	dt = x / 86400;
+
+	hour = x / 3600 % 24;
+
+	b = x - (dt * 86400) - (hour *  3600);
+
+	min = b / 60;
+
+	sec = b % 60;
+
+	printf("%d초는 %d일 %d시간 %d분 %d초입니다.", x, dt, hour, min,sec);
+
+
+	//int score;
+
+	////예제를 수정하여 점수가 100 초과 또는 0 미만일 때 점수가 잘못되었습니다 출력
+
+	//printf("성적을 입력하시오 : ");
+	//scanf("%d", &score);
+
+	//if (score > 100 || score < 0)
+	//	printf("점수가 잘못되었습니다\n");
+	//else if (score >= 90)
+	//	printf("학점 A\n");
+	//else if (score >= 80)
+	//	printf("학점 B\n");
+	//else if (score >= 70)
+	//	printf("학점 C\n");
+	//else if (score >= 60)
+	//	printf("학점 D\n");
+	//else
+	//	printf("학점 F\n");
+
+	/*int time, age, cost;
+
+	printf("이용을 시작하실 시간을 입력해주세요.(0시~24시) : ");
+	scanf("%d",&time);
+
+	printf("이용하실 고객님의 나이를 입력해 주세요 : ");
+	scanf("%d", &age);
+
+	if (time < 17)
+		printf("자유이용권을 구매하셔야합니다\n");
+	else
+		printf("야간이용권을 구매하셔야합니다\n");
+
+	if (age < 3)
+		printf("3세 미만 고객은 무료입니다.\n");
+	else if (age <= 12 && age >= 3 || age >= 65)
+		printf("소인 입장료를 내시면 됩니다.\n");
+	else
+		printf("대인 입장료를 내시면 됩니다.\n");
+
+
+	if (time <= 17 && age >= 13 && age <=65)
+		printf("대인 자유이용권은 34000원 입니다.\n");
+	else if (time <= 17 && age<=12 && age >= 3 || age>=65)
+		printf("소인 자유이용권은 25000원 입니다.\n");
+	else if (age < 3)
+		printf("비용을 내지 않으셔도 됩니다.\n");
+	else
+		printf("야간이용권은 소인, 대인 모두 10000원 입니다.\n");*/
+
+
+
+	return 0;
+}

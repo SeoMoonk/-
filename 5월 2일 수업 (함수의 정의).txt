@@ -1,0 +1,73 @@
+
+//p.276p 예제 2번도 다시 해보아야한다. (지워버렸음)
+
+
+//#include <stdio.h>
+//
+////함수 정의 = 함수 헤더 + 함수 바디
+//int square (int n)				//square란 함수의 이름을 정하고, 정수 n이 들어갔을때 결과값을 n*n(제곱)으로 출력하는 함수라고 선언한다.
+//{	
+//	return (n*n);
+//}
+//
+//
+//int main()
+//{
+//	int result;
+//	result = square(5);
+//	printf("%d\n", result);
+//
+//	return 0;
+//}
+
+
+//#include <stdio.h>
+//
+//int get_max(int x, int y)
+//{
+//	if (x > y)
+//		return x;
+//	else
+//		return y;
+//}
+//
+//int main()
+//{
+//	int a,b;
+//
+//	printf("두 개의 정수 입력 : ");
+//	scanf("%d %d", &a, &b);
+//	printf("큰 수는 %d입니다.\n", get_max(a,b));
+//
+//	return 0;
+//}
+
+#include <stdio.h>
+int get_integer()
+{
+	int n;
+	printf("정수 입력 : ");
+	scanf("%d", &n);
+	return n;
+}
+
+int power(int x, int y)
+{
+	int i;
+	long result = 1;
+
+	for (i = 0; i <y; i++)		
+		result = result * x;
+
+	return result ;
+}
+
+int main ()
+{
+	int a, b;
+	a = get_integer();		//get_integer라는 정수를 입력받는 함수를 만들어서 printf, scnaf 과정을 한번에 하도록 함.
+	b = get_integer();
+	printf("%d의 %d승은 %d입니다. \n", a, b, power(a, b));
+
+	return 0;
+}
